@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+mat-card{
+    width:50%;
+}
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+.delete
+{
+   color: red;
+}

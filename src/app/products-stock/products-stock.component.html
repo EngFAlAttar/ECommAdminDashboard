@@ -1,0 +1,103 @@
+<mat-grid-list cols="3">
+    
+    @for(product of products; track product.id)
+    {
+        <mat-grid-tile>
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                  <mat-card-title>{{product.name}}</mat-card-title>
+                  <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{product.imageUrl}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    {{product.description}}
+                  </p>
+                  @if(product.stock===0)
+                  {
+                    <p [style.color]=" product.stock| stock:product.stock">Out of Stock!</p>
+                  }
+                  @else {
+                    <p> stock: <span [style.color]=" product.stock| stock:product.stock">{{product.stock}}</span></p>
+                  }
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Add Stock</button>
+                  <button mat-button>Remove Stock</button>
+                  <button mat-stroked-button class="delete"> <mat-icon>delete</mat-icon> Remove Product</button>
+                </mat-card-actions>
+              </mat-card>
+              
+        </mat-grid-tile>
+    }
+    
+</mat-grid-list>
+<div class="w-75">
+    <mat-form-field>
+        <mat-label>Search...</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+      </mat-form-field>
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="price">
+          <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.price | currency:'USD' }} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="category">
+            <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="stock">
+            <mat-header-cell *matHeaderCellDef> Stock </mat-header-cell>
+            <mat-cell *matCellDef="let element" [style.color]="element.stock | stock:element.stock " style="font-weight: bold;"> {{element.stock}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="status">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="imageUrl">
+            <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.imageUrl}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="createdAt">
+            <mat-header-cell *matHeaderCellDef> Created at </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.createdAt}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="updatedAt">
+            <mat-header-cell *matHeaderCellDef> Updated at </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.updatedAt}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="rating">
+            <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.rating}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="tags">
+            <mat-header-cell *matHeaderCellDef> Tags </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.tags}} </mat-cell>
+          </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+</div>
