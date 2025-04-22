@@ -25,33 +25,40 @@ const SUBCATEGORIES = [
 ]
 const PETS = [
     {
-        name:"Birds"
+        name:"Birds",
+        image: "assets/parrot.gif"
     },
     {
-        name:"Cats"
+        name:"Cats",
+        image: "assets/cat.gif"
     },
     {
-        name:"Dogs"
+        name:"Dogs",
+        image: "assets/golden-retriever.gif"
     },
     {
-        name:"Horses"
+        name:"Horses",
+        image: "assets/horse.gif"
     },
     {
-        name:"Reptiles"
+        name:"Reptiles",
+        image: "assets/chameleon.gif"
     },
     {
-        name:"Rodents"
+        name:"Rodents",
+        image: "assets/rabbit.gif"
     },
 ]
 export interface Category{
     id: number,
     name: string,
-    image: string,
+    image?: string,
     children?:Category[]
 }
 
 export interface FilterNode{
     name: string,
+    image?:string,
     children?:FilterNode[]
 }
 

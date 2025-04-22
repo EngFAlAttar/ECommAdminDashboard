@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS } from '../../../data/products';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { StockPipe } from '../pipes/stock.pipe';
+import { StockPipe } from '../../../pipes/stock.pipe';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';

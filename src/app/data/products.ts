@@ -56,3 +56,117 @@ export const PRODUCTS : Product[] = [
       tags: ["office", "ergonomic"]
     }
   ];
+  export const PET_SUPPLY: Product[] = [
+    {
+        id: 1,
+        name: "Premium Dog Food",
+        description: "High-quality dog food with essential nutrients.",
+        price: 29.99,
+        category: "Food",
+        stock: 150,
+        status: "Available",
+        rating: 4.8,
+        imageUrl: "https://example.com/images/dog_food.jpg",
+        createdAt: "2025-01-15T08:00:00Z",
+        updatedAt: "2025-04-20T10:00:00Z",
+        tags: ["dog", "food", "premium"]
+    },
+    {
+        id: 2,
+        name: "Cat Scratching Post",
+        description: "Durable scratching post for cats.",
+        price: 45.99,
+        category: "Furniture",
+        stock: 75,
+        status: "Available",
+        rating: 4.5,
+        imageUrl: "https://example.com/images/cat_scratching_post.jpg",
+        createdAt: "2025-02-10T09:00:00Z",
+        updatedAt: "2025-04-18T11:00:00Z",
+        tags: ["cat", "furniture", "scratching"]
+    },
+    {
+        id: 3,
+        name: "Bird Cage",
+        description: "Spacious bird cage with multiple perches.",
+        price: 89.99,
+        category: "Housing",
+        stock: 30,
+        status: "Available",
+        rating: 4.7,
+        imageUrl: "https://example.com/images/bird_cage.jpg",
+        createdAt: "2025-03-05T10:00:00Z",
+        updatedAt: "2025-04-19T12:00:00Z",
+        tags: ["bird", "housing", "cage"]
+    },
+    {
+        id: 4,
+        name: "Fish Tank",
+        description: "Glass fish tank with filtration system.",
+        price: 120.00,
+        category: "Housing",
+        stock: 20,
+        status: "Available",
+        rating: 4.9,
+        imageUrl: "https://example.com/images/fish_tank.jpg",
+        createdAt: "2025-01-20T11:00:00Z",
+        updatedAt: "2025-04-21T13:00:00Z",
+        tags: ["fish", "housing", "tank"]
+    },
+    {
+        id: 5,
+        name: "Rabbit Hutch",
+        description: "Wooden hutch for rabbits with secure lock.",
+        price: 75.50,
+        category: "Housing",
+        stock: 40,
+        status: "Available",
+        rating: 4.6,
+        imageUrl: "https://example.com/images/rabbit_hutch.jpg",
+        createdAt: "2025-02-25T12:00:00Z",
+        updatedAt: "2025-04-22T14:00:00Z",
+        tags: ["rabbit", "housing", "hutch"]
+    },
+    {
+        id: 6,
+        name: "Horse Saddle",
+        description: "Comfortable and durable saddle for horses.",
+        price: 250.00,
+        category: "Equipment",
+        stock: 10,
+        status: "Available",
+        rating: 4.9,
+        imageUrl: "https://example.com/images/horse_saddle.jpg",
+        createdAt: "2025-03-01T15:00:00Z",
+        updatedAt: "2025-04-21T16:00:00Z",
+        tags: ["horse", "equipment", "saddle"]
+    },
+    {
+        id: 7,
+        name: "Reptile Terrarium",
+        description: "Glass terrarium with heating and lighting system.",
+        price: 180.00,
+        category: "Housing",
+        stock: 25,
+        status: "Available",
+        rating: 4.8,
+        imageUrl: "https://example.com/images/reptile_terrarium.jpg",
+        createdAt: "2025-03-10T17:00:00Z",
+        updatedAt: "2025-04-22T18:00:00Z",
+        tags: ["reptile", "housing", "terrarium"]
+    },
+    {
+        id: 8,
+        name: "Hamster Wheel",
+        description: "Silent running wheel for hamsters.",
+        price: 15.99,
+        category: "Toys",
+        stock: 100,
+        status: "Available",
+        rating: 4.7,
+        imageUrl: "https://example.com/images/hamster_wheel.jpg",
+        createdAt: "2025-02-20T19:00:00Z",
+        updatedAt: "2025-04-21T20:00:00Z",
+        tags: ["hamster", "toys", "wheel"]
+    }
+];

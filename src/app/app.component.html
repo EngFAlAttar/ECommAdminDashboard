@@ -12,8 +12,12 @@
 <main class="main">
   <app-navbar></app-navbar>
   <div class="content">
-    <app-filter></app-filter>
-    <app-products-stock></app-products-stock>
+    <div class="d-flex flex-column justify-content-center" style="height: 100vh; width: 100vw;">
+      <div>
+        <router-outlet />
+      </div>
+
+    </div>
     </div>
 </main>
 
@@ -26,4 +30,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
